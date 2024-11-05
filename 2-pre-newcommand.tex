@@ -1,0 +1,67 @@
+%------------------ Schrifttyp in der Kopf- und Fußzeilen
+\setkomafont{pageheadfoot}{\footnotesize\sffamily}
+
+% Ändern der Abbildungs- und Tabellenbezeichnung (Niedermair S.157)
+\addto\captionsngerman{\renewcommand\figurename{Abb.}}
+\addto\captionsngerman{\renewcommand\tablename{Tab.}}
+\renewcommand\listfigurename{Abbildungen}
+
+% Betrag eines Wertes
+\newcommand{\abs}[1]{\lvert #1 \rvert} 
+
+% Absatz mit Formatierung
+\newcommand{\absatz}[1]{\textbf{\textsc{#1}}} 
+
+% Anhang Verweis
+\newcommand{\anhang}[1]{Anhang \vref{#1}}
+
+% Aufgabe Zähler
+\newcommand{\aufgabe}{\stepcounter{plus} Aufgabe \arabic{plus}}
+
+% Itemize Abkürzungen
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+% Compact Enumerate Abkürzungen
+\newcommand{\bce}{\begin{compactenum}}
+\newcommand{\ece}{\end{compactenum}}
+
+% Begin und End Equation
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+
+% Realteil einer Zahl
+\newcommand{\real}[1]{\text{Re}\left\{#1\right\}}
+
+% Multicolumn für Tabellen
+\newcommand{\mc}{\multicolumn}
+
+% Paralleltext
+\newcommand{\pl}[1]{\ParallelLText{#1}}
+\newcommand{\pr}[1]{\ParallelRText{#1}}
+\newcommand{\pp}{\ParallelPar}
+
+% Text in Rot
+\newcommand{\textrot}[1]{\textcolor{red}{#1}}
+
+% Abkürzung für multicolumn
+\newcommand{\tab}[2]{\multicolumn{1}{#1}{#2}}
+
+% Unterstreichen
+\newcommand{\ul}[1]{\underline{#1}}
+
+% Vspace Abkürzung
+\newcommand{\vsf}{\vspace{5pt}}
+
+% Abkürzungen für häufig verwendete Begriffe
+\newcommand{\zb}{z.B.\,}
+\newcommand{\idr}{i.d.R.\,}
+
+% Zähler für Beispiele
+\newcounter{req}
+\newcommand{\zaehler}[1]{\refstepcounter{req}{#1} \thereq}
+
+
+
+
+

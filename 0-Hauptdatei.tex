@@ -1,0 +1,98 @@
+\documentclass[paper=a4,11pt,titlepage,twoside=true,headings=normal,numbers=noenddot,captions=tableabove,listof=totoc,index=totoc,bibliography=totoc]{scrreprt} % chapter erlaubt
+
+\input{1-pre-packages}
+\input{2-pre-newcommand}
+\input{3-pre-Seitenlayout}
+\input{4-pre-Kopf-Fusszeile}
+\input{5-Glossar}
+
+\usepackage{etoolbox}
+\newbool{deutsch}
+% \booltrue{deutsch}	% comment out to switch document to english
+
+%---------------------------- VARIABLEN festlegen ------------------
+
+%----------- TITEL
+\newcommand{\titelLV}{Praktikumsbericht} % Bachelorarbeit, TitelLV, etc
+\newcommand{\untertitela}{Berufspraktische Tätigkeit von\\[0.4cm] Max Mustermann} 
+% Thema der Abschlussarbeit Ein prägnanter Haupttitel max. 1 Zeile ggf. ergänzt durch einen ausführlicheren Untertitel mit max: 2 Zeilen, max. 250 Zeichen gesamt] 
+
+%---------- Studenten
+% -------- Student 1
+\newcommand{\nameA}{Matrikelnummer: 1234567} % Name
+% --------- Student 2, falls vorhanden
+\newcommand{\nameB}{}
+% --------- Student 3, falls vorhanden
+\newcommand{\nameC}{} %<--- Inhalt "Herr Student drei" bei Bedarf löschen
+
+%---------- Datum einfügen
+%\newcommand{\datum}{26.01.2021} % oder
+\newcommand{\datum}{\today} %  aktuelles Datum
+
+%----------- Lehrveranstaltungsleitung
+\newcommand{\lvleitung}{Prof. Dr. Albert Einstein}
+
+%----------------------------- Literaturdateien einfügen
+\addbibresource{A-Literatur-Buecher.bib}
+%\addbibresource{A-Literatur-Normen.bib}
+\addbibresource{A-Literatur-Internet.bib}
+
+
+
+%:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+\begin{document}
+%:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+% Titelblatt einfügen
+%\input{6a-Titelblatt-LV} % Laborprotokolle, Technische Berichte
+\input{6b-Titelblatt-Thesis} % Thesis (unter 6b ausfüllen!)
+
+%-----------------------------------------------------
+\pagenumbering{roman}
+
+% Versicherung, Abstract, Danksagung
+\input{7-Prosa}
+
+% Inhaltsverzeichnis einfügen
+\tableofcontents
+\newpage
+
+% Glossar einfügen
+\printglossaries
+
+%--------------------
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\input{B-0-Einleitung} 
+\input{B-1-Theorie}   
+\input{B-2-Methode} 
+\input{B-3-Ergebnisse}  
+\input{B-4-Diskussion}   
+\input{B-5-Fazit}
+
+%-------------------
+\newpage
+\renewcommand{\refname}{Literatur- und Quellenverzeichnis} % bei scrartcl
+\renewcommand{\bibname}{Literatur- und Quellenverzeichnis} % bei scrbook und scrrprt
+\printbibheading
+%\printbibliography[nottype=online,heading=subbibliography,
+\printbibliography[type=book,heading=subbibliography,
+title={Literaturverzeichnis}]
+\printbibliography[type=online,heading=subbibliography,
+title={Quellenverzeichnis (Internet)}]
+%\printbibliography[type=misc,heading=subbibliography,
+%title={Normenverzeichnis}]
+
+%----------- Bild und Tabellenverzeichnis
+\newpage
+\listoffigures 
+\listoftables
+\newpage
+
+\appendix
+\input{8-Anhang}
+
+%:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+\end{document}
+%:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::

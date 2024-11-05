@@ -1,0 +1,27 @@
+% Einstellungen für Kopf- und Fußzeilen mit scrlayer-scrpage (KOMA-Script)
+\usepackage{scrlayer-scrpage}
+\pagestyle{scrheadings}
+
+% Automatische Markierung von Kapiteln
+\automark[chapter]{chapter}
+
+% Kopfzeilen-Einstellungen
+\ihead[]{Thema Bachelorarbeit} % Kopfzeile innen
+\chead[]{} % Kopfzeile mittig
+\ohead[]{\headmark} % Kopfzeile außen (Titel)
+
+% Fußzeilen-Einstellungen
+\ifoot[]{Max Mustermann} % Fußzeile innen (Name Autor)
+\cfoot[]{} % Fußzeile mittig
+\ofoot[]{\pagemark} % Fußzeile außen (Seitenzahl)
+
+
+% Text für Kopf- und Fußzeilen
+
+% Kopfzeile: Hochschule RheinMain auf ungeraden Seiten rechts, auf geraden Seiten links
+% \newcommand{\titelkopfzeilelinks}{Hochschule RheinMain}
+% \newcommand{\titelkopfzeilerechts}{Hochschule RheinMain}
+
+% Fußzeile: Studienbereich auf ungeraden Seiten links, auf geraden Seiten rechts, Seitenzahlen in der jeweils anderen Position
+% \newcommand{\titelfusszeilelinks}{Studienbereich Angewandte Physik \& Medizintechnik}
+% \newcommand{\titelfusszeilerechts}{Seite \thepage\ von \pageref{LastPage}}

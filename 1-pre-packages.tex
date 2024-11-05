@@ -1,0 +1,60 @@
+% Language and Font Encoding
+\usepackage{microtype}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc}  % Remove if using XeLaTeX or LuaLaTeX
+\usepackage{scrhack} 
+
+% Math Packages
+\usepackage{amssymb}
+\usepackage[fleqn,intlimits]{amsmath} % [fleqn] for left-aligned equations
+
+% Graphics and Tables
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{tabulary}
+\usepackage{float} % Improved control over float positioning
+\usepackage{wrapfig} % Wrapping text around figures
+\usepackage{rotating} % Rotating figures and tables
+
+% Captions
+\usepackage[labelfont={footnotesize,sf,bf},textfont={footnotesize,sf}]{caption}
+\usepackage[font={scriptsize,sl},captionskip=3pt]{subfig}
+
+% Units and Chemistry
+\usepackage[locale=DE,per-mode=symbol]{siunitx} % For consistent SI units
+\usepackage[version=4]{mhchem} % For chemical formulas
+
+% Fonts and Typography
+\usepackage{lmodern} % Improved font with better hyphenation support
+\usepackage{csquotes} % Quotation handling
+\usepackage{ellipsis} % Improved ellipsis handling
+
+% Listings and Code
+%\usepackage{listings}
+\usepackage{minted}
+
+% Hyperlinks
+\usepackage{hyperref} % Must be loaded last
+\hypersetup{
+    linkcolor={0 1 1}, 
+    linkbordercolor={1 1 1}, 
+    citebordercolor={1 1 1},
+    breaklinks=true,
+    hidelinks
+}
+
+% Grafiken und Schaltkreise
+\usepackage{tikz}
+\usepackage{circuitikz}
+
+% BIBlatex
+\usepackage[backend=biber,style=phys,biblabel=brackets,defernumbers=true]{biblatex}
+\usepackage[acronym]{glossaries}
+
+% Sonstiges
+\usepackage{lipsum} % Dummy Text zum Testen
